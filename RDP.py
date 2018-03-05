@@ -66,8 +66,9 @@ def get_depth():
     # if user provides incorrect input (not a number), print error message and
     # provide another input prompt to enter correct value (a number)
     except ValueError:
-        print("Please enter your planned dive depth as an integer value in feet")
-        get_depth()
+        print("ERROR: Please enter your planned dive depth as an integer "+
+        "value in feet")
+        return get_depth()
 
 # declare a variable that holds user input for planned depth dive
 user_depth = get_depth()
@@ -90,8 +91,8 @@ def get_time():
     # if user provides incorrect input (not a number), print error message and
     # provide another input prompt to enter correct value (a number)
     except ValueError:
-        print("Please enter your planned dive duration in minutes")
-        get_time()
+        print("ERROR: Please enter your planned dive duration in minutes")
+        return get_time()
 
 # declare a variable that holds user input for planned dive duration
 user_time = get_time()
